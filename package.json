@@ -5,7 +5,11 @@
   "main": "server.js",
   "dependencies": {
     "express": "^4.16.2",
-    "mysql": "^2.15.0"
+    "express-handlebars": "^3.0.0",
+    "method": "^2.0.0",
+    "method-override": "^2.3.10",
+    "mysql": "^2.15.0",
+    "override": "0.0.1"
   },
   "devDependencies": {},
   "scripts": {

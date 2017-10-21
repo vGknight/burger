@@ -2,39 +2,34 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
-var orm = require("./config/orm.js")
+// var orm = require("./config/orm.js")
+var burgers = require("./models/burger.js");
+var methodOverride = require("method-override");
+
+
 // Sets up the Express App
 // =============================================================
 var app = express();
 var PORT = process.env.PORT || 3000;
 
+// Serve static content for the app from the "public" directory in the application directory.
+app.use(express.static("public"));
 
-orm.selectAll("*", "burgers", function(result){
-	var data = result;
-	console.log(data);
-});
+app.use(bodyParser.urlencoded({ extended: false }));
 
+app.use(bodyParser.json());
 
-// orm.insertOne("burgers","Testing2",false, function(result){
-// 	var data = result;
-// 	console.log(data);
-// 	console.log(data.affectedrows);
-// });
+// Set Handlebars.
+var exphbs = require("express-handlebars");
 
-// orm.updateOne("burgers",4,true, function(result){
-// 	var data = result;
-// 	console.log(data);
-// 	console.log(data.affectedrows);
-// });
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 
-orm.selectAll("*", "burgers", function(result){
-	var data = result;
-	console.log(data);
-});
+// Import routes and give the server access to them.
+var routes = require("./controllers/burgers_controller.js");
 
 
-
-
+app.use("/", routes);
 
 
 
