@@ -9,7 +9,28 @@ var app = express();
 var PORT = process.env.PORT || 3000;
 
 
+orm.selectAll("*", "burgers", function(result){
+	var data = result;
+	console.log(data);
+});
 
+
+// orm.insertOne("burgers","Testing2",false, function(result){
+// 	var data = result;
+// 	console.log(data);
+// 	console.log(data.affectedrows);
+// });
+
+// orm.updateOne("burgers",4,true, function(result){
+// 	var data = result;
+// 	console.log(data);
+// 	console.log(data.affectedrows);
+// });
+
+orm.selectAll("*", "burgers", function(result){
+	var data = result;
+	console.log(data);
+});
 
 
 
@@ -22,3 +43,4 @@ var PORT = process.env.PORT || 3000;
 app.listen(PORT, function() {
     console.log(`our app is running on port ${ PORT }`);
 });
+
