@@ -17,9 +17,9 @@ $(function() {
       function() {
         console.log("Burger is now eaten!", devoured);
         // Reload the page to get the updated list
-        // location.reload();
+        location.reload();
         // $(".burgers-eaten").load(location.href + " .burgers-eaten"); 
-        $("#burgers-eaten").load("#burgers-eaten");
+        // $("#burgers-eaten").load("#burgers-eaten");
 
 
 
@@ -47,9 +47,9 @@ $(function() {
       function() {
         console.log("Burger Added...");
         // Reload the page to get the updated list - this sucks
-        // location.reload();
+        location.reload();
         
-        $("#burgers-uneaten").load("#burgers-uneaten");
+        // $("#burgers-uneaten").load("#burgers-uneaten");
    
       }
     );
