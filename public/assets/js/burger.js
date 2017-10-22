@@ -17,8 +17,8 @@ $(function() {
       function() {
         console.log("Burger is now eaten!", devoured);
         // Reload the page to get the updated list
-        // location.reload();
-        $(".burgers-eaten").load(location.href + " .burgers-eaten"); 
+        location.reload();
+        // $(".burgers-eaten").load(location.href + " .burgers-eaten"); 
 
 
       }
