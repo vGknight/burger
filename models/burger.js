@@ -4,8 +4,15 @@ console.log("burgers loaded");
 
 
 var burger = {
+    // selectAll: function(cb) {
+    //     orm.selectAll("*", "burgers", function(result) {
+    //         cb(result);
+
+    //     });
+    // },
+
     selectAll: function(cb) {
-        orm.selectAll("*", "burgers", function(result) {
+        orm.selectAll("id, burgers_name, devoured", "burgers", function(result) {
             cb(result);
 
         });
@@ -33,4 +40,3 @@ var burger = {
 
 
 module.exports = burger;
-
