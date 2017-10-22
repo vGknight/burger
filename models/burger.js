@@ -1,25 +1,25 @@
 var orm = require("../config/orm.js");
 
-console.log("heroku_e11a0e070b1ab27 loaded");
+console.log("burgers loaded");
 
 
 var burger = {
     selectAll: function(cb) {
-        orm.selectAll("*", "heroku_e11a0e070b1ab27", function(result) {
+        orm.selectAll("*", "burgers", function(result) {
             cb(result);
 
         });
     },
 
     insertOne: function(name, devoured, cb) {
-        orm.insertOne("heroku_e11a0e070b1ab27", name, devoured, function(result) {
+        orm.insertOne("burgers", name, devoured, function(result) {
 
             cb(result);
         })
     },
 
     updateOne: function(item_id, devoured, cb) {
-        orm.updateOne("heroku_e11a0e070b1ab27", item_id, devoured, function(result) {
+        orm.updateOne("burgers", item_id, devoured, function(result) {
 
             cb(result);
 
