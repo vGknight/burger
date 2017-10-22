@@ -4,12 +4,7 @@ console.log("burgers loaded");
 
 
 var burger = {
-    // selectAll: function(cb) {
-    //     orm.selectAll("*", "burgers", function(result) {
-    //         cb(result);
 
-    //     });
-    // },
 
     selectAll: function(cb) {
         orm.selectAll("id, burgers_name, devoured", "burgers", function(result) {

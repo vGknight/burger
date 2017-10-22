@@ -33,11 +33,22 @@ router.put("/api/update/:id", function(req, res) {
     var id = req.params.id;
     var devoured = req.body.devoured;
 
+
     console.log("ID " + id + " dev " + devoured);
 
-    burger.updateOne(id, devoured, function() {
+    burger.updateOne(id, devoured, function(result) {
+        console.log(result.changedRows);
 
-        res.render("index");
+        if (result.changedRows == 0) {
+            // If no rows were changed, then the ID must not exist, so 404
+            return res.status(404).end();
+        } else {
+            res.render("index");
+            // res.status(200);
+            // res.send();
+        }
+
+        
     });
 });
 
