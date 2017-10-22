@@ -1,7 +1,8 @@
 <div class="row">
     <div class="col-12 text-center" id="header">
         <img id="burger-img" src="./assets/img/burger.png">
-        <h2>Eat Da burger!</h2>
+
+        <h2 id="head-h2">Eat Da burger!</h2>
     </div>
 </div>
 <div class="row">
@@ -14,7 +15,7 @@
                     <div class="change-devoured card-body" data-id="{{this.id}}"> 
 
                     {{math @index "+" 1}}. {{burgers_name}} </div>
-                    <!-- <span>{{math @index "+" 1}}</span> -->
+
                 </div>
             </div>
 
@@ -33,7 +34,7 @@
         <div class="card">
             <div class="card-body strikethrough" data-id="{{this.id}}">
                 {{math @index "+" 1}}. {{burgers_name}}
-             <!-- {{id}}. {{burgers_name}} -->
+
             </div>
         </div>
         {{/if}} {{/each}}

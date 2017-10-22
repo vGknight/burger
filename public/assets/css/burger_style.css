@@ -10,6 +10,15 @@ body {
     margin-bottom: 20px;
     margin-top: 20px;
     min-height: 250px;
+    position: relative;
+}
+
+#head-h2 {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    padding-right: 25px;
 }
 
 .burger-entry {
@@ -33,7 +42,5 @@ body {
 .strikethrough {
     text-decoration: line-through;
     color: lightgray;
-        padding: 5px;
+    padding: 5px;
 }
-
-
