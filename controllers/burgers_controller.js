@@ -24,7 +24,7 @@ router.post("/api/add", function(req, res) {
     var burgerName = req.body.burgers_name;
     var devoured = req.body.devoured;
     burger.insertOne(burgerName, devoured, function() {
-        
+
         res.redirect("/");
     });
 });
@@ -36,7 +36,7 @@ router.put("/api/update/:id", function(req, res) {
     console.log("ID " + id + " dev " + devoured);
 
     burger.updateOne(id, devoured, function() {
-        // res.redirect("/");
+
         res.render("index");
     });
 });
