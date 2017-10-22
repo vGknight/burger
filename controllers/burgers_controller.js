@@ -10,42 +10,37 @@ console.log("controller loaded");
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
 
-  burger.selectAll(function(data) {
-    var hbsObject = {
-      burger: data
-    };
-    console.log(hbsObject);
+    burger.selectAll(function(data) {
+        var hbsObject = {
+            burger: data
+        };
+        console.log(hbsObject);
 
-     // res.json(hbsObject);
-     res.render("index", hbsObject);
-  });
+        res.render("index", hbsObject);
+    });
 });
 
 router.post("/api/add", function(req, res) {
-	var burgerName = req.body.burgers_name;
-	var devoured = req.body.devoured;
-  burger.insertOne(burgerName, devoured, function() {
-    res.redirect("/");
-  });
+    var burgerName = req.body.burgers_name;
+    var devoured = req.body.devoured;
+    burger.insertOne(burgerName, devoured, function() {
+        res.redirect("/");
+    });
 });
 
 router.put("/api/update/:id", function(req, res) {
-  var id =  req.params.id;
-  var devoured = req.body.devoured;
+    var id = req.params.id;
+    var devoured = req.body.devoured;
 
-  // console.log("ide", condition);
+    console.log("ID " + id + " dev " + devoured);
 
-  console.log("ID " + id + " dev " + devoured);
-
-  burger.updateOne(id, devoured, function() {
-    // res.redirect("/");
-    res.render("index");
-  });
+    burger.updateOne(id, devoured, function() {
+        // res.redirect("/");
+        res.render("index");
+    });
 });
 
 
 
 // Export routes for server.js to use.
 module.exports = router;
-
-

@@ -1,16 +1,9 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
 
-  // $('#burgers-uneaten').hide();
 
   $(".change-devoured").on("click", function(event) {
     var id = $(this).data("id");
-
-    // console.log(this);
-    // var newSleep = $(this).data("newsleep");
-
-
-    console.log(id);
 
     var devoured = {
       devoured: 1
@@ -24,21 +17,22 @@ $(function() {
       function() {
         console.log("Burger is now eaten!", devoured);
         // Reload the page to get the updated list
-        // $('#burgers-uneaten').show();
         location.reload();
-        $('#burgers-eaten').removeClass('hidden');
+
       }
     );
   });
 
+
   $(".create-form").on("submit", function(event) {
     // Make sure to preventDefault on a submit event.
+
     event.preventDefault();
 
     var newBurger = {
       burgers_name: $("#burger").val().trim(),
       devoured: 0
-      // sleepy: $("[name=sleepy]:checked").val().trim()
+
     };
 
     // Send the POST request.
@@ -54,18 +48,6 @@ $(function() {
     );
   });
 
-  // $(".delete-cat").on("click", function(event) {
-  //   var id = $(this).data("id");
-
-  //   // Send the DELETE request.
-  //   $.ajax("/api/cats/" + id, {
-  //     type: "DELETE",
-  //   }).then(
-  //     function() {
-  //       console.log("deleted cat", id);
-  //       // Reload the page to get the updated list
-  //       location.reload();
-  //     }
-  //   );
-  // });
 });
+
+

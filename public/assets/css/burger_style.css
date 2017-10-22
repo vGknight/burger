@@ -1,49 +1,38 @@
+body {
+    background: cadetblue;
+}
 
+#burger-img {
+    max-width: 250px;
+}
 
-#burger-img{
-	max-width: 250px;
-
-	} 
-
-#header{
-	margin-bottom: 20px;
+#header {
+    margin-bottom: 20px;
     margin-top: 20px;
 }
 
-.burger-entry{
-	margin-top: 35px;
-
-
-}
-#burger{
-	margin-bottom: 20px;
-}
-body{
-	background: cadetblue;
+.burger-entry {
+    margin-top: 35px;
 }
 
-
-/*::-webkit-input-placeholder {
-
-   text-align: center;
-
-}*/
-
-/*:-moz-placeholder {  Firefox 18- 
-
-   text-align: center;
-
-}*/
-
-/*::-moz-placeholder {   Firefox 19+ 
-
-   text-align: center;
-
+#burger {
+    margin-bottom: 20px;
 }
-*/
-/*:-ms-input-placeholder {  
 
-   text-align: center;
-
+.card {
+    margin: 5px;
 }
-*/
+
+
+
+.center {
+    margin: auto!important;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+    color: lightgray;
+        padding: 5px;
+}
+
+
