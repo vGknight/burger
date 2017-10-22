@@ -45,9 +45,9 @@ $(function() {
       function() {
         console.log("Burger Added...");
         // Reload the page to get the updated list
-        // location.reload();
+        location.reload();
         // $(".card").load(location.href + " .card"); 
-         $(".burgers-uneaten").load(location.href + " .burgers-uneaten"); 
+         // $(".burgers-uneaten").load(location.href + " .burgers-uneaten"); 
       }
     );
   });
