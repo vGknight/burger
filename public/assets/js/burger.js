@@ -18,7 +18,8 @@ $(function() {
         console.log("Burger is now eaten!", devoured);
         // Reload the page to get the updated list
         // location.reload();
-        $(".card").load(location.href + " .card"); 
+        $(".burgers-eaten").load(location.href + " .burgers-eaten"); 
+
 
       }
     );
@@ -45,7 +46,8 @@ $(function() {
         console.log("Burger Added...");
         // Reload the page to get the updated list
         // location.reload();
-        $(".card").load(location.href + " .card"); 
+        // $(".card").load(location.href + " .card"); 
+         $(".burgers-uneaten").load(location.href + " .burgers-uneaten"); 
       }
     );
   });
