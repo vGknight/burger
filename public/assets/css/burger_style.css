@@ -9,6 +9,7 @@ body {
 #header {
     margin-bottom: 20px;
     margin-top: 20px;
+    min-height: 250px;
 }
 
 .burger-entry {
