@@ -11,7 +11,10 @@
         <div class="row">
             <div class="col-8">
                 <div class="card">
-                    <div class="change-devoured card-body" data-id="{{this.id}}"> {{id}}. {{burgers_name}}</div>
+                    <div class="change-devoured card-body" data-id="{{this.id}}"> 
+
+                    {{math @index "+" 1}}. {{burgers_name}} </div>
+                    <!-- <span>{{math @index "+" 1}}</span> -->
                 </div>
             </div>
 
@@ -28,7 +31,9 @@
     <div class="col-6" id="burgers-eaten">
         {{#each burger}} {{#if devoured}}
         <div class="card">
-            <div class="card-body strikethrough" data-id="{{this.id}}"> {{id}}. {{burgers_name}}
+            <div class="card-body strikethrough" data-id="{{this.id}}">
+                {{math @index "+" 1}}. {{burgers_name}}
+             <!-- {{id}}. {{burgers_name}} -->
             </div>
         </div>
         {{/if}} {{/each}}
