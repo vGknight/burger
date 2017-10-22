@@ -1,25 +1,58 @@
-<h1>Burgers</h1>
-<h2>Burgers That have not been eatan</h2>
-<ul>
-    {{#each burger}} 
-      {{#unless devoured}}
-        <li class="change-devoured" data-id="{{this.id}}"> {{burgers_name}} {{devoured}} {{id}}</li>
-      {{/unless}} 
-    {{/each}}
-</ul>
-<h2>Burgers That have been eaten</h2>
-<ul>
-    {{#each burger}} {{#if devoured}}
-    <li> {{burgers_name}} {{devoured}} {{id}}</li>
-    {{/if}} {{/each}}
-</ul>
-<h2>Add a Burger</h2>
-<form class="create-form">
-    <div class="form-group">
-        <label for="burger">Burger Name:</label>
-        <input type="text" id="burger" name="burgers_name">
+<div class="row">
+    <div class="col-12 text-center" id="header">
+        <img id="burger-img" src="./assets/img/burger.png">
+        <h2>Eat Da burger!</h2>
     </div>
-
-    <button type="submit">Add Burger</button>
-</form>
-
+</div>
+<div class="row">
+    <div class="col-6" id="burgers-uneaten">
+        <!-- <h2>Burgers That have not been eatan</h2> -->
+        <!-- <ul> -->
+        {{#each burger}} {{#unless devoured}}
+        <div class="row">
+            <div class="col-8">
+                <div class="change-devoured" data-id="{{this.id}}"> {{id}}. {{burgers_name}}</div>
+            </div>
+            <div class="col-4">
+                <button type="button" class="btn btn-outline-dark change-devoured" data-id="{{this.id}}">
+                    Devour it!
+                    <i class="fa fa-cutlery" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+        {{/unless}} {{/each}}
+    </div>
+    <!-- </div> -->
+    <!-- </div> -->
+    <div class="col-6" id="burgers-eaten">
+        {{#each burger}} {{#if devoured}}
+        <div class="card">
+            <div class="card-body" data-id="{{this.id}}"> {{id}}. {{burgers_name}}
+            </div>
+        </div>
+        {{/if}} {{/each}}
+    </div>
+</div>
+<div class="row burger-entry">
+    <div class="col-4">
+    </div>
+    <div class="col-4 text-center">
+        <!-- <h2>Add a Burger</h2> -->
+     <!--    <form class="create-form">
+            <div class="form-group">
+                <input type="text" id="burger" name="burgers_name" placeholder="Royale with Cheese">
+            </div>
+        </form> -->
+        <form class="create-form">
+            <div class="form-group">
+                <!-- <label for="exampleFormControlTextarea1">Example textarea</label> -->
+                <textarea class="form-control" id="burger" name="burgers_name" rows="3" placeholder="Royale with Cheese"></textarea>
+                <button class="btn btn-outline-dark" type="submit">Add Burger
+                    <i class="fa fa-plus" aria-hidden="true"></i></button>
+            </div>
+            <p>Enter a Burger which you think is tasty</p>
+        </form>
+    </div>
+    <div class="col-4">
+    </div>
+</div>

@@ -1,0 +1,49 @@
+
+
+#burger-img{
+	max-width: 250px;
+
+	} 
+
+#header{
+	margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.burger-entry{
+	margin-top: 35px;
+
+
+}
+#burger{
+	margin-bottom: 20px;
+}
+body{
+	background: cadetblue;
+}
+
+
+/*::-webkit-input-placeholder {
+
+   text-align: center;
+
+}*/
+
+/*:-moz-placeholder {  Firefox 18- 
+
+   text-align: center;
+
+}*/
+
+/*::-moz-placeholder {   Firefox 19+ 
+
+   text-align: center;
+
+}
+*/
+/*:-ms-input-placeholder {  
+
+   text-align: center;
+
+}
+*/

@@ -14,8 +14,6 @@ var orm = {
                 throw err;
             }
 
-
-
             cb(result);
 
         });
@@ -56,7 +54,7 @@ var orm = {
             function(error, results) {
                 if (error) throw error;
                 cb(results);
-                // console.log(results.affectedRows)
+
             });
 
 
@@ -66,37 +64,4 @@ var orm = {
 }
 
 
-
-
-
-
-//
-// selectAll() 
-
-// insertOne() 
-
-// updateOne()
-
-
-
 module.exports = orm;
-
-
-// module.exports = {
-//     selectAll: selectAll,
-//     insertOne: insertOne,
-//     updateOne: updateOne
-// }
-
-
-
-// var orm ={
-
-//  selectAll: function(){
-
-
-//  }
-
-
-
-// }
