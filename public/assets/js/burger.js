@@ -17,9 +17,9 @@ $(function() {
       function() {
         console.log("Burger is now eaten!", devoured);
         // Reload the page to get the updated list
-        location.reload();
+        // location.reload();
         // $(".burgers-eaten").load(location.href + " .burgers-eaten"); 
-        $(".burgers-eaten").load(".burgers-eaten");
+        $("#burgers-eaten").load("#burgers-eaten");
 
 
 
@@ -49,7 +49,7 @@ $(function() {
         // Reload the page to get the updated list - this sucks
         // location.reload();
         // $(".burgers-uneaten").load("content.html #divContent");
-        $(".burgers-uneaten").load(".burgers-uneaten");
+        $("#burgers-uneaten").load("#burgers-uneaten");
         // $(".card").load(location.href + " .card"); 
          // $(".burgers-uneaten").load(location.href + " .burgers-uneaten"); 
       }
