@@ -48,10 +48,9 @@ $(function() {
         console.log("Burger Added...");
         // Reload the page to get the updated list - this sucks
         // location.reload();
-        // $(".burgers-uneaten").load("content.html #divContent");
+        
         $("#burgers-uneaten").load("#burgers-uneaten");
-        // $(".card").load(location.href + " .card"); 
-         // $(".burgers-uneaten").load(location.href + " .burgers-uneaten"); 
+   
       }
     );
   });
